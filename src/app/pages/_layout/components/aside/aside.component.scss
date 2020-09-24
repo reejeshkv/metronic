@@ -11,4 +11,23 @@
   .menu-text {
     white-space: nowrap;
   }
+  .brand {
+    .brandText {
+      display: inline;
+      color: #FFF;
+      font-size: 20px;
+      padding-left: 10px;
+    }
+    // Logo
+    .brand-logo {
+      // Minimized Aside Mode
+      .aside-minimize:not(.aside-minimize-hover) & {
+        .brandText {
+          display: none;
+        }
+      }
+    }
+  
+  }
+  
 }

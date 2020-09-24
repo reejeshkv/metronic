@@ -69,6 +69,10 @@ export class AuthHTTPService {
     );
   }
 
+  changePwd(user): Observable<any> {
+    return this.http.post<UserModel>(API_USERS_URL, user);
+  }
+
   getUserByToken(token: string): Observable<UserModel> {
     const user = UsersTable.users.find((u) => {
       return u.accessToken === token;
@@ -82,6 +86,7 @@ export class AuthHTTPService {
   }
 
   getAllUsers(): Observable<UserModel[]> {
+    debugger;
     return this.http.get<UserModel[]>(API_USERS_URL);
   }
 }

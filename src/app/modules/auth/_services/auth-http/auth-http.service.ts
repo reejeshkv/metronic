@@ -38,4 +38,8 @@ export class AuthHTTPService {
       headers: httpHeaders,
     });
   }
+
+  changePwd(user): Observable<any> {
+    return this.http.post<UserModel>(API_USERS_URL, user);
+  }
 }

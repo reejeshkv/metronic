@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { Observable } from 'rxjs';
 import { UsersTable } from './fake-db/users.table';
+import { UCUsersTable } from './fake-db/ucusers.table';
 import { CarsTable } from './fake-db/cars.table';
 
 @Injectable({
@@ -21,6 +22,9 @@ export class FakeAPIService implements InMemoryDbService {
 
       // data-table
       cars: CarsTable.cars,
+
+      //uc users
+      ucusers: UCUsersTable.users
     };
     return db;
   }
